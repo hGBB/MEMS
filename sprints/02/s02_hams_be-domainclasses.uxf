@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>392</y>
+      <w>168</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Alert Rules
+--
+-id: Long
+-cpuTh: Float
+-ramTh: Float
+-netTh: Float
+-tempTh: Float
+-eneTh: Float
+-smoothing: Field
+-configuredBy: User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>216</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-email: String
+-name: String
+-password: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>88</y>
+      <w>184</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+-id: Long
+-sendInterval: Long
+-userGroups: List&lt;UserGroup&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>88</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>UserGroup
+--
+-id:Long
+-name: String
+-nodes: List&lt;Node&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>216</y>
+      <w>184</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>KpiPackage
+--
+-id: Long
+-timestamp: Long
+-originNode: Node
+-cpuU: Float
+-ramU: Float
+-netT: Float
+-tempts: Float
+-eneC: Float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>216</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Notifications
+--
+-id: Long
+-timestamp: Long
+-text: String
+-recipient: User
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>144</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>248</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..1</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>280</y>
+      <w>48</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>112</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>144</y>
+      <w>48</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1..1
+m1=0..*</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

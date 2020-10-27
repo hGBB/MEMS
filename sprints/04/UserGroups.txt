@@ -1,0 +1,16 @@
+Behavior analysis for DELETE User Group
+
+affected entities:
+assignedTo
+UserGroup
+isPartOf
+
+1: The "assignedTo" database entries in which the information about connections between Nodes and the to-be-deleted-UserGroup is stored will be removed.
+2: The "isPartOf" database entries in which the information about connections between Users and the to-be-deleted-UserGroup is stored will be removed.
+3: The result, a UserGroup with NO assigned nodes and NO assigned Users will be removed.
+
+Following these three steps in the given order all database issues will be resolved by design and no remains from deleted UserGroups will remain in the database.
+
+If there's a User with only a connection "isPartOf" to the to-be-deleted UserGroup the Administrator who chose to delete said UserGroup will be given the option to delete said User as well.
+
+The DELETE UserGroup action will be registered in a permanent, not editable log to offer the possibility to retrace actions that affect the core functionality of the system. Further information about the log functionality can be viewed in the separate file named "Retraceability of crucial User actions".

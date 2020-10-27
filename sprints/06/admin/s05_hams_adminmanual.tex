@@ -1,0 +1,87 @@
+%
+\documentclass[twoside,a4paper]{refart}
+\usepackage[T1]{fontenc}
+\usepackage{ae} 
+\usepackage{makeidx}
+\usepackage{ifthen}
+
+\DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
+\def\bs{\char'134 } 
+\newcommand{\zB}{z.\,B.}
+\newcommand{\dH}{d.\,h.}  
+
+\title{HamerMEMS Administration Guide}
+\author{ Simon Sch\"onberger\\Korbinian Simonis (Monitoring Part)}
+\date{\today}
+\emergencystretch1em 
+\makeindex
+
+\setcounter{tocdepth}{2}
+\settextfraction{0.7}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  This document describes how to install and maintain HamerMEMS.
+\end{abstract}
+
+
+\tableofcontents
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{General}
+
+\subsection{Structure}
+The software is delivered in two main parts.
+\begin{enumerate}
+  \item \emph{Server}: A Web Application aRchive, that serves logic and the user interface.
+  \item \emph{Monitoring Client}: A Python script that gaters all KPIs of interest on your servers you are interested in.
+\end{enumerate}
+\subsection{System Requirements}
+In order to run the \emph{Server}, you need a Linux machine with network access running Java 11. A MySQL database must be provided on the same machine or on any machine that is reachable through the network. In order to send Alerts, a SMTP server is required. It is also recommended, that this machine is reachable from the outside via a static IP address or a Domain Name to enable simple access to the user interface.
+
+Each machine that will be monitored must run Linux with systemd and provide a Python 3 runtime.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Installation}
+\subsection{Server Deployment}
+\subsubsection{Prepare the Database}
+First of all, create an empty MySQL database for HamerMEMS. Please note the database server URL, the name of the database, username and password for further use.
+
+\subsubsection{Prepare a TLS certificate keystore}
+In order to secure the applications communication, you need at least a TLS private key, certificate and CA certificate. All those and other certificates that belong to the chain must be stored in a keystore of PCKS12, JKS or JCEKS format. Make sure that your end-users will be able to trust the certificate, either by retrieving it from a recognized Certificate Authority or by deploying your own CA to your client's trust stores.
+
+\subsubsection{Generate a secret PSK}
+To securely authenticate users, the server needs an unique cryptographic secret. Use the "secretgen.jar" tool from the delivery. You may run it via \texttt{java -jar /path/to/secretgen.jar}. A CLI will appear, just type in generate (see help for further options) and keep the output file.
+
+\subsubsection{Prepare application.properties}
+An example application.properties file is provided in the delivery. Load the file into a plain text editor and replace the example values using the information from the former steps. Further options are extensively described in the file itself and need attention, too.
+
+\subsubsection{Copy files to the server}
+Copy application.properties, the secret, the keystore and server.war to the machine you would like to deploy on.
+
+\subsubsection{Run the server}
+To run the server application, you simply need to run it on the JVM via \texttt{java -jar /path/to/server.war}. You may enable it as a systemd unit in order to keep it running even after reboots etc.
+
+\subsection{Monitoring Client Installation}
+\subsubsection{Preparations}
+Copy the mc\_hamer.zip file to the node you want to integrate to the EMS.
+E.g. \texttt{scp mc\_hamer.zip <username>@<ip\_of\_node>:<location>}
+
+Unzip the package: \texttt{unzip mc\_hamer.zip}
+
+\subsubsection{Automated install}
+Fully automated with the install.sh script:\\
+\texttt{bash install.sh -u <ip\_of\_backend>:<port> -t <secret\_pin> \\((optional:)) -i <send\_intervall> -n <name>}\\
+-u and -t are required, for the send\_interval and name default values will be used if not specified.
+
+The secret PIN can be requested via the applications user interface. For this, log in with an administative account, navigate to "Node Management" and click on the big "+" symbol.
+
+\end{document}

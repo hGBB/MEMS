@@ -1,0 +1,19 @@
+Requested changes:
+3.8 Security: added table for connections
+
+Additional changes:
+spellcheck whole document.
+change server node / server to node in the whole document.
+change F006: may -> shall. Changed spelling in accordance to our own guidelines. 
+change Figure 2.1: clarification: Monitoring Clients are software ran on the server. Inlined MC as software installed on nodes.
+change Figure 3.2: clarification: The label was not clear. Changed to Rough sketch and Administrator View. 
+
+Changes included in the next document:
+Exact description of Oscillation and how it will be fixed.
+Exact description of technologies used to realize the EMS.
+Exact description of how the User is able to select Data Resolution, date and time frame for the KPI evaluation.
+Exact description of all configurations that can be made by an administrator.
+Exact description of what the User/Administrator is authorized to do.
+Exact description of how Users are able to set individual Notification rules for every Node.
+Exact description of how the Monitoring Client will be executed.
+Exact description of the End-to-End responsiveness. 

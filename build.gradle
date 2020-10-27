@@ -1,0 +1,6 @@
+allprojects {
+  group = 'de.unipa.hams'
+  version = '0.0.1-SNAPSHOT'
+}
+
+

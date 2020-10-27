@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>130</y>
+      <w>280</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>Trivial DTOs
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>160</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>UserDTO
+-
+-id: long
+-name: string
+-email: string
+-changedPW: string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>270</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>KpiDTO
+-
+-id: long
+-name: string
+-unit: string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>380</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>RecordDTO
+-
+-id: long
+-value: string
+-timestamp: date
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>380</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>typeOfDTO
+-
+-id: long
+-recordId: long
+-KpiId: long
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>160</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>NodeDTO
+-
+-id: long
+-name: string
+-interval: double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>270</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>NotificationDTO
+-
+-id: long
+-text: string
+-timestamp: date</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

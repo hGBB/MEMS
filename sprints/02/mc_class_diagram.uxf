@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>16</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>80</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Temperature
+--
++get_Temp()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>80</y>
+      <w>192</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Network Throughput
+--
++get_N_Troughout()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>80</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>RAM Usage
+--
++get_RAM_Usage()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>80</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Energy Consumption
+--
++get_Energy()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>32</x>
+      <y>80</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>CPU Usage
+--
++get_CPU_Usage()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>320</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+-register_to_BE()
+-websocket_sub()
+-websocket_send()
+-start_collector_process()
+-KPIs_to_JSON()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>160</y>
+      <w>48</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>160</y>
+      <w>368</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;210.0;70.0;210.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>160</y>
+      <w>208</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;110.0;40.0;110.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>160</y>
+      <w>208</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;40.0;10.0;40.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>160</y>
+      <w>368</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+</panel_attributes>
+    <additional_attributes>210.0;10.0;210.0;70.0;10.0;70.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>

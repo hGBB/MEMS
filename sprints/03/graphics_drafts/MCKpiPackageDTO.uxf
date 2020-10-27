@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>290</y>
+      <w>400</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Conversion of MCKpiPackage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>400</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>KPI
+-
+-name: string
+-value: double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>320</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>KpiPackage
+-
+-nodeId: long
+
+-
+-timestamp: date
+-
+-kpis: List&lt;KPI&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>400</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;50.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>320</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+-id: long
+-name: string
+-sendInterval: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>340</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+</diagram>

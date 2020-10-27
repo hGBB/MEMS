@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<p>
+  Hello <span th:text="${name}"></span> !
+</p>
+<p>This email contains your username for the Hamer Monitoring Energy Management
+  System.</p>
+<p>Your Username: <b th:text="${username}"></b></p>
+<p>Your password is: <b th:text="${password}"></b></p>
+<p>Change your password the first time you log onto the system</p>
+<!--
+<p>Follow this link to set your password and access the system:</p>
+<a th:href="${link}">Link</a>
+-->
+<p>If you have any questions please talk to your HamerMEMS Administrator.</p>
+<p>Regards, <br/>
+  <em>The HamerMEMS Team</em>
+
+</p>
+<br/>
+<p>This is an automatically created Email please do not answer this mail.</p>
+</body>
+</html>

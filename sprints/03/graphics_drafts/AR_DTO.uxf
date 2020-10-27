@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>561</y>
+      <w>132</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>observes
+--
+-id: long
+-leq: boolean
+-threshold: double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>143</y>
+      <w>121</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id: long
+-email: string
+-name: string
+-changedPW: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>22</y>
+      <w>121</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Alert Rule
+--
+-id: long
+-name: string
+-occurance: int
+-timeframe: int
+-sleep: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>484</x>
+      <y>165</y>
+      <w>220</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;AlertRuleDTO&gt;&gt;
+--
+-id: Long 
+-name: string
+-occurance: int
+-timeframe: int
+-sleep: int
+--
+-UserId: long
+
+--
+-nodes: List&lt;NodeDTO&gt;
+
+--
+-kpis: List&lt;KPIContainerDTO&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>264</y>
+      <w>121</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+-id: long
+-name: string
+-sendInterval: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>44</y>
+      <w>132</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;140.0;70.0;140.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>165</y>
+      <w>132</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;90.0;40.0;90.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>286</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>242</x>
+      <y>0</y>
+      <w>484</w>
+      <h>682</h>
+    </coordinates>
+    <panel_attributes>halign=center
+Conversion of AlertRule to in depth DTO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>561</y>
+      <w>110</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>KPI
+--
+-id: long
+-name: string
+-unit: string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>374</y>
+      <w>121</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>KPIContainerDTO
+-
+-kpiId: long
+-name: string
+-unit: string
+-
+-observesId: long
+-leq: boolean
+-threshold: double
+
+
+
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>473</y>
+      <w>253</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;60.0;210.0;60.0;210.0;80.0;210.0;60.0;120.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>319</y>
+      <w>99</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;100.0;30.0;100.0</additional_attributes>
+  </element>
+</diagram>

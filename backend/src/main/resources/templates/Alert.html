@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<p>
+  Hello <span th:text="${name}"></span> !
+</p>
+<p>You receive this email because an Alert of yours got triggered.</p>
+<p>Name of the alert: <b th:text="${alertName}"></b></p>
+<p>The incident occurred at <span th:text="${time}"></span></p>
+<p>The following Node set it off: <b th:text="${node}"></b></p>
+<p>Threshold of<span th:text="${alertThreshold}"></span><span
+  th:text="${kpiValue}"></span> has been exceeded. Current value is <b
+  th:text="${actualValue}"></b><span th:text="${kpiValue}"></span></p>
+<p>Consider checking the affected system.</p>
+<p>If you have any questions please talk to your HamerMEMS Administrator.</p>
+<p>Regards, <br/>
+  <em>The HamerMEMS Team</em>
+
+</p>
+<br/>
+<p>This is an automatically created Email. Do not answer this mail.</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+package de.unipa.hams.hamer.persistence.api;
+
+import de.unipa.hams.hamer.domain.Audit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface AuditRepository extends JpaRepository<Audit, Long> {
+
+}

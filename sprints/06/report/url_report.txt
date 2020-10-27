@@ -1,0 +1,8 @@
+http://enpr01.fim.uni-passau.de:8088
+http://enpr01.fim.uni-passau.de:8088/_nuxt/103aafb202fd0db4db71.js
+http://enpr01.fim.uni-passau.de:8088/_nuxt/88596d3500fb341f2659.js
+http://enpr01.fim.uni-passau.de:8088/_nuxt/9b68e3c7f7cacc0f73b2.js
+http://enpr01.fim.uni-passau.de:8088/_nuxt/b6644ac02e423dff11a1.js
+http://enpr01.fim.uni-passau.de:8088/favicon.ico
+http://enpr01.fim.uni-passau.de:8088/robots.txt
+http://enpr01.fim.uni-passau.de:8088/sitemap.xml

@@ -1,0 +1,56 @@
+\documentclass{scrreprt}
+
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor} %color in tables
+\usepackage{hyperref}
+\usepackage{array, tabularx, caption, boldline}
+\usepackage{cellspace}
+\usepackage{pdfpages} 
+\usepackage{float}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\RedeclareSectionCommand[
+  beforeskip=-.5\baselineskip,
+  afterskip=.25\baselineskip]{subsubsection}
+\RedeclareSectionCommand[
+  beforeskip=-.5\baselineskip,
+  afterskip=-0.5em]{paragraph}
+\RedeclareSectionCommand[
+  beforeskip=-.2\baselineskip,
+  afterskip=-0.5em]{subparagraph}
+
+\subject{EP Secure Cloud Energy Monitoring Platform WS 2018/19}
+\title{Sprint 04 Changelog}
+\subtitle{Scrum Master and Product Owner: Simon Sch\"onberger \\ Author: Benedikt Holler}
+\author{Martin Binder\\Korbinian Simonis\\Benedikt Holler\\Andreas M\"uller\\Simon Sch\"onberger}
+\date{As of \today}
+
+\begin{document}
+\maketitle
+This list seeks to give a quick overview of organizational and technical changes that were done to our project since Sprint 03.
+
+\paragraph{CL401: User Story changes.} 
+\begin{itemize} 
+	\item User Stories US101 and US102 have been merged (full login).
+	\item Due to personal reasons, User Stories US101, US102, US103, US104 and US801 were reassigned to Simon Sch\"onberger.
+	\item US801 was mistakenly assigned to Andreas M\"uller, it has been reassigned to Simon Sch\"onberger.
+	\item Due to personal reasons, User Stories US213, US602, US603 and US604, all of which revolve around User Group Management, were reassigned to Simon Sch\"onberger after Benedikt Holler had completed the correspondent Backend implementations.
+	\item In order to balance workload, User Stories US203, US204 and US205 were reassigned to Andreas M\"uller.
+	\item In order to balance workload, User Stories US206, US208 and US209 were reassigned to Benedikt Holler.
+	\item A new User Story that concerns the implementation of an Audit Log for Privileged Actions will be added.
+\end{itemize}
+\paragraph{CL402: Return type of Services.} Methods of "Service" classes return an Entity, unlike "Controller" classes that return DTOs. This was a mistake within the class diagram.
+\paragraph{CL403.1: Notification API.} A new API consisting of Controller, Service and Repository for Notifications has been implemented.
+\paragraph{CL403.2: KPI API.} A new API consisting of Controller, Service and Repository for KPIs has been implemented.
+\paragraph{CL404 Minor Backend implementation changes.}: The AlertRuleDTO class no longer has KPIcontainerDTO and NodeDTO attributes. These have been replaced by a List containing Rules Designations.
+\paragraph{CL405: STOMP.} The STOMP protocol will not be used from now on since it is not supported by plain Websocket.
+\paragraph{CL406: Easier Frontend navigation.} For all Frontend pages that can contain large amounts of objects (e.g. Nodes or Users), a "Search" field has been added.
+\paragraph{CL407: User stories concerning Usability.} Plans were made to introduce User Stories that cover the Usability of our Frontend. More details on such User Stories will follow once we have decided on Acceptance Criteria and how to split them up.
+\
+\end{document}
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>56</x>
+      <y>84</y>
+      <w>168</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Administrator
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>294</x>
+      <y>84</y>
+      <w>168</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Privileged User
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>546</x>
+      <y>84</y>
+      <w>140</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Basic User
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>126</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>532</x>
+      <y>56</y>
+      <w>168</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=left
+
+--
+fontsize=8
+CRUD:
+&gt; sees assigned nodes
+&gt; alert notification
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>56</x>
+      <y>56</y>
+      <w>168</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=left
+
+--
+fontsize=8
+CRUD: 
+&gt; user management
+&gt; create/delete groups
+&gt; name/delete nodes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>126</y>
+      <w>112</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>294</x>
+      <y>56</y>
+      <w>168</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=left
+
+--
+fontsize=8
+CRUD: 
+&gt; group management
+&gt; node management
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
